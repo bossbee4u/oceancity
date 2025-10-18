@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres.hgupbhapsedcszmwtcws:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhndXBiaGFwc2VkY3N6bXd0Y3dzIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MDU2OTUzMiwiZXhwIjoyMDc2MTQ1NTMyfQ.g9bNB9aE4gmIK4cV2GJmgRT3JRN7kVj9Ieo00kT4_uM@aws-0-us-east-1.pooler.supabase.com:6543/postgres"
+      ]
+    }
+  }
+}

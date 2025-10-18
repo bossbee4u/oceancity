@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Ocean City Theme - Maritime & Logistics */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Ocean blue primary colors */
+    --primary: 204 89% 38%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 204 89% 48%;
+    --primary-dark: 204 89% 28%;
+
+    /* Secondary ocean tones */
+    --secondary: 188 78% 41%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted ocean grays */
+    --muted: 210 15% 94%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent seafoam */
+    --accent: 174 62% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Warning & Status colors */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 204 89% 38%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar ocean theme */
+    --sidebar-background: 210 30% 12%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 204 89% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 25% 18%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 210 25% 18%;
+    --sidebar-ring: 204 89% 48%;
+
+    /* Gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(204 89% 38%), hsl(188 78% 41%));
+    --gradient-subtle: linear-gradient(180deg, hsl(210 20% 98%), hsl(210 15% 94%));
+    
+    /* Shadows */
+    --shadow-ocean: 0 10px 40px -10px hsl(204 89% 38% / 0.25);
+    --shadow-card: 0 4px 12px -2px hsl(215 25% 15% / 0.08);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 215 28% 10%;
+    --foreground: 210 20% 92%;
+
+    --card: 215 24% 14%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 215 24% 14%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 204 89% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 204 89% 58%;
+    --primary-dark: 204 89% 38%;
+
+    --secondary: 188 78% 51%;
+    --secondary-foreground: 215 28% 10%;
+
+    --muted: 215 22% 20%;
+    --muted-foreground: 215 16% 60%;
+
+    --accent: 174 62% 57%;
+    --accent-foreground: 215 28% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 22% 20%;
+    --input: 215 22% 20%;
+    --ring: 204 89% 48%;
+
+    --sidebar-background: 215 30% 8%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 204 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 15%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 215 25% 15%;
+    --sidebar-ring: 204 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations for loading components */
+@keyframes truck-drive {
+  0% {
+    transform: translateX(-20px) translateY(-50%);
+  }
+  50% {
+    transform: translateX(120px) translateY(-50%) scale(1.05);
+  }
+  100% {
+    transform: translateX(260px) translateY(-50%);
+  }
+}
+
+@keyframes loading-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes road-lines {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-truck-drive {
+  animation: truck-drive 3s ease-in-out infinite;
+}
+
+.animate-loading-progress {
+  animation: loading-progress 2s ease-in-out infinite;
+}
+
+.animate-road-lines {
+  animation: road-lines 1s linear infinite;
+}
